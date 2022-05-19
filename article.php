@@ -12,20 +12,24 @@ if (mysqli_connect_error()) {
     exit;
 }
 
-$sql = "SELECT *
+// 驗證傳進來的GET是不是數字
+if (isset($_GET['id']) && is_numeric($_GET['id'])) {
+
+    $sql = "SELECT *
         FROM article
-        WHERE id = 3";
+        WHERE id = " . $_GET['id'];
 
-$results = mysqli_query($conn, $sql);
+    $results = mysqli_query($conn, $sql);
 
-//判斷查詢結果是否成功
-if ($results === false) {
-    echo mysqli_error($conn);
+    //判斷查詢結果是否成功
+    if ($results === false) {
+        echo mysqli_error($conn);
+    } else {
+        $article = mysqli_fetch_assoc($results);
+    }
 } else {
-    $article = mysqli_fetch_assoc($results);
+    $article = null;
 }
-
-echo "Connected successfully";
 
 ?>
 

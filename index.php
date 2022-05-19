@@ -51,7 +51,7 @@ echo "Connected successfully";
             <?php foreach ($articles as $article) : ?>
                 <li>
                     <article>
-                        <h2><?= $article['title']; ?></h2>
+                        <h2><a href="article.php?id=<?= $article['id']?>"><?= $article['title']; ?></a></h2>
                         <p><?= $article['content']; ?></p>
                     </article>
                 </li>
@@ -62,12 +62,4 @@ echo "Connected successfully";
 </body>
 </html>
 
-日文 :
-みやだ(姓) あきたか(名子)
-中文 :
-宮田(姓) 彰鷹(名子)
-英文 :
-Miyada(姓) Akitaka(名子)
-韓文 :
-미야다(姓) 아키타카(名子
 

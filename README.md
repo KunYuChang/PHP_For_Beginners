@@ -56,6 +56,22 @@ ALTER TABLE cms.article ADD INDEX (title);
 - [mysqli_fetch_all](https://www.php.net/manual/en/mysqli-result.fetch-all.php)
 - [mysqli_fetch_assoc](https://www.php.net/manual/en/mysqli-result.fetch-assoc.php)
 
+## URL傳遞資料
+
+透過id查詢單一文章有幾種方法:
+1. hot coding 
+2. query string
+3. $_GET (better)
+
+- [Superglobals](https://www.php.net/manual/en/language.variables.superglobals.php)
+- [$_GET](https://www.php.net/manual/en/reserved.variables.get.php)
+
+## SQL Injection
+
+- [is_numeric](https://www.php.net/manual/en/function.is-numeric.php)
+- [isset](https://www.php.net/manual/en/function.isset.php)
+- [Logical Operators](https://www.php.net/manual/en/language.operators.logical.php)
+
 ## 專案來源
 
 此專案為 Dave Hollingworth 所開設的 Udemy 課程
