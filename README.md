@@ -145,7 +145,17 @@ POST
 
 - [Data Manipulation](https://mariadb.com/kb/en/data-manipulation/)
 - [mysqli_insert_id](https://www.php.net/manual/en/mysqli.insert-id.php)
+- [The mysql Database Tables](https://mariadb.com/kb/en/the-mysql-database-tables/)
 
+How SQL Injection Attacks Work
+
+- [The mysql Database Tables](https://mariadb.com/kb/en/the-mysql-database-tables/)
+- [crack mysql password](https://www.google.co.uk/search?q=crack+mysql+password)
+- [Free Password Hash Cracker](https://crackstation.net/)
+
+Avoid SQL Injection Attacks:Escape Input
+- [mysqli_real_escape_string](https://www.php.net/manual/en/mysqli.real-escape-string.php)
+- [mysqli_escape_string](https://www.php.net/manual/en/function.mysqli-escape-string.php)
 ## 專案來源
 
 此專案為 Dave Hollingworth 所開設的 Udemy 課程

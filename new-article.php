@@ -5,9 +5,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     require 'includes/database.php';
 
     $sql = "INSERT INTO article (title, content, published_at)
-            VALUES ('". $_POST['title'] . "','"
-                      . $_POST['content'] . "','"
-                      . $_POST['published_at'] . "')";
+            VALUES ('". mysqli_escape_string($conn,$_POST['title']) . "','"
+                      . mysqli_escape_string($conn,$_POST['content']) . "','"
+                      . mysqli_escape_string($conn,$_POST['published_at']) . "')";
 
 //    var_dump($sql); exit;
 
