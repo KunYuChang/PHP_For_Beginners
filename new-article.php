@@ -1,6 +1,26 @@
 <?php
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
-    var_dump($_POST);
+
+    // 資料庫連線
+    require 'includes/database.php';
+
+    $sql = "INSERT INTO article (title, content, published_at)
+            VALUES ('". $_POST['title'] . "','"
+                      . $_POST['content'] . "','"
+                      . $_POST['published_at'] . "')";
+
+//    var_dump($sql); exit;
+
+    /** @var mysqli $conn */
+    $results = mysqli_query($conn, $sql);
+
+    //判斷查詢結果是否成功
+    if ($results === false) {
+        echo mysqli_error($conn);
+    } else {
+        $id = mysqli_insert_id($conn);
+        echo "Inserted record with ID: $id";
+    }
 }
 ?>
 

@@ -141,6 +141,10 @@ POST
 - [HTML5 PLEASE](https://html5please.com/)
 - [Can I use](https://caniuse.com/)
 
+## 資料插入資料庫
+
+- [Data Manipulation](https://mariadb.com/kb/en/data-manipulation/)
+- [mysqli_insert_id](https://www.php.net/manual/en/mysqli.insert-id.php)
 
 ## 專案來源
 
