@@ -1,21 +1,12 @@
 <?php
 
-$db_host = 'localhost';
-$db_name = 'cms';
-$db_user = 'cms_www';
-$db_pass = 'cms_pass';
-
-$conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
-
-if (mysqli_connect_error()) {
-    echo mysqli_connect_error();
-    exit;
-}
+include  'database.php';
 
 $sql = "SELECT *
         FROM article
         ORDER BY published_at";
 
+/** @var mysqli $conn */
 $results = mysqli_query($conn, $sql);
 
 //判斷查詢結果是否成功
@@ -30,20 +21,7 @@ echo "Connected successfully";
 
 ?>
 
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My blog</title>
-</head>
-<body>
-    <header>
-        <h1>My blog</h1>
-    </header>
-    <main>
+<?php require 'header.php'; ?>
         <?php if(empty($articles)) : ?>
             <p>No articles found.</p>
         <?php else : ?>
@@ -58,8 +36,6 @@ echo "Connected successfully";
             <?php endforeach;?>
         </ul>
         <?php endif;?>
-    </main>
-</body>
-</html>
+<?php require 'footer.php'; ?>
 
 

@@ -72,6 +72,14 @@ ALTER TABLE cms.article ADD INDEX (title);
 - [isset](https://www.php.net/manual/en/function.isset.php)
 - [Logical Operators](https://www.php.net/manual/en/language.operators.logical.php)
 
+## Don't Repeat Youerself
+
+- [include](https://www.php.net/manual/en/function.include.php)
+- [require](https://www.php.net/manual/en/function.require.php)
+- [include_once](https://www.php.net/manual/en/function.include-once.php)
+- [require_once](https://www.php.net/manual/en/function.require-once.php#function.require-once)
+
 ## 專案來源
 
 此專案為 Dave Hollingworth 所開設的 Udemy 課程
+
