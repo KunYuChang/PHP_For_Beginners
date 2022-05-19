@@ -23,9 +23,51 @@ if ($results === false){
     echo mysqli_error($conn);
 } else {
     //  fetch all 取得全部資料
-    $articles = mysqli_fetch_all($results);
-
-    var_dump($articles);
+    $articles = mysqli_fetch_all($results, MYSQLI_ASSOC);
 }
 
 echo "Connected successfully";
+
+?>
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My blog</title>
+</head>
+<body>
+    <header>
+        <h1>My blog</h1>
+    </header>
+    <main>
+        <?php if(empty($articles)) : ?>
+            <p>No articles found.</p>
+        <?php else : ?>
+            <ul>
+            <?php foreach ($articles as $article) : ?>
+                <li>
+                    <article>
+                        <h2><?= $article['title']; ?></h2>
+                        <p><?= $article['content']; ?></p>
+                    </article>
+                </li>
+            <?php endforeach;?>
+        </ul>
+        <?php endif;?>
+    </main>
+</body>
+</html>
+
+日文 :
+みやだ(姓) あきたか(名子)
+中文 :
+宮田(姓) 彰鷹(名子)
+英文 :
+Miyada(姓) Akitaka(名子)
+韓文 :
+미야다(姓) 아키타카(名子
+

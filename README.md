@@ -54,6 +54,7 @@ ALTER TABLE cms.article ADD INDEX (title);
 - [Comparison Operators](https://www.php.net/manual/en/language.operators.comparison.php)
 - [mysqli_fetch_row](https://www.php.net/manual/en/mysqli-result.fetch-row.php)
 - [mysqli_fetch_all](https://www.php.net/manual/en/mysqli-result.fetch-all.php)
+- [mysqli_fetch_assoc](https://www.php.net/manual/en/mysqli-result.fetch-assoc.php)
 
 ## 專案來源
 
