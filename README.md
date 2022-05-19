@@ -50,6 +50,11 @@ ALTER TABLE cms.article ADD INDEX (title);
 - [mysqli_extension](https://www.php.net/manual/en/book.mysqli.php)
 - [mysqli_connect_error](https://www.php.net/manual/en/mysqli.connect-error.php)
 - [mysqli_query](https://www.php.net/manual/en/mysqli.query.php)
+- [PHP_Booleans](https://www.php.net/manual/en/language.types.boolean.php#language.types.boolean.casting)
+- [Comparison Operators](https://www.php.net/manual/en/language.operators.comparison.php)
+- [mysqli_fetch_row](https://www.php.net/manual/en/mysqli-result.fetch-row.php)
+- [mysqli_fetch_all](https://www.php.net/manual/en/mysqli-result.fetch-all.php)
+
 ## 專案來源
 
 此專案為 Dave Hollingworth 所開設的 Udemy 課程
