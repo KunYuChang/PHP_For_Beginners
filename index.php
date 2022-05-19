@@ -1,6 +1,6 @@
 <?php
 
-include  'database.php';
+require 'includes/database.php';
 
 $sql = "SELECT *
         FROM article
@@ -21,7 +21,7 @@ echo "Connected successfully";
 
 ?>
 
-<?php require 'header.php'; ?>
+<?php require 'includes/header.php'; ?>
         <?php if(empty($articles)) : ?>
             <p>No articles found.</p>
         <?php else : ?>
@@ -36,6 +36,6 @@ echo "Connected successfully";
             <?php endforeach;?>
         </ul>
         <?php endif;?>
-<?php require 'footer.php'; ?>
+<?php require 'includes/footer.php'; ?>
 
 

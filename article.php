@@ -1,6 +1,6 @@
 <?php
 
-include  'database.php';
+include 'includes/database.php';
 
 // 驗證傳進來的GET是不是數字
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {
@@ -9,6 +9,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
         FROM article
         WHERE id = " . $_GET['id'];
 
+    /** @var mysqli $conn */
     $results = mysqli_query($conn, $sql);
 
     //判斷查詢結果是否成功
@@ -23,7 +24,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 
 ?>
 
-<?php require 'header.php'; ?>
+<?php require 'includes/header.php'; ?>
     <?php if (empty($article)) : ?>
         <p>Article not found.</p>
     <?php else : ?>
@@ -36,5 +37,5 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
             </li>
         </ul>
     <?php endif; ?>
-<?php require 'footer.php'; ?>
+<?php require 'includes/footer.php'; ?>
 
