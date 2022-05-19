@@ -1,3 +1,9 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    var_dump($_POST);
+}
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,8 +14,9 @@
     <title>Forms</title>
 </head>
 <body>
-<form action="process_form.php">
-    <input type="text" name="search">
+<form method="post">
+    <input type="text" name="username">
+    <input type="password" name="password">
     <button>Send</button>
 </form>
 </body>

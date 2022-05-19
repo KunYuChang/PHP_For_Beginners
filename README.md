@@ -107,6 +107,40 @@ ALTER TABLE cms.article
 ## HTML Forms
 
 - [The Form element](https://devdocs.io/html/element/form)
+- [button tag vs input type=”button” attribute](https://www.geeksforgeeks.org/button-tag-vs-input-typebutton-attribute/)
+- 預設為GET
+
+預設GET發送表單的缺點
+1. 表單輸入的內容顯示於URL查詢參數中(敏感數據不希望呈現)
+2. URL也保存在瀏覽器的歷史記錄中
+
+使用POST, 約定成俗, HTML屬性中設置為小寫
+```php
+<form method="post"></form>
+```
+
+### GET VS POST
+
+GET 
+1. 儲存書籤 : 😀可以使用來儲存書籤
+2. 敏感資料 : 😵不要使用於敏感數據!
+3. 容量限制 : 😵有容量的限制，因此無法發送大量數據!
+4. 使用時機 : 讀取資料
+
+POST
+1. 儲存書籤 : 😵不能使用來儲存書籤!
+2. 敏感資料 : 😀使用於傳遞敏感數據
+3. 容量限制 : 😀沒有容量的限制
+4. 使用時機 : 傳送資料
+
+- [$_SERVER](https://www.php.net/manual/en/reserved.variables.server.php)
+
+### 不同類型的數據
+
+- [Form Input](https://devdocs.io/html/element/input)
+- [HTML5 PLEASE](https://html5please.com/)
+- [Can I use](https://caniuse.com/)
+
 
 ## 專案來源
 
