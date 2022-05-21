@@ -23,22 +23,26 @@ if (isset($_GET['id'])) {
     die("id not supplied, article not found");
 }
 
-$sql = "DELETE FROM article
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $sql = "DELETE FROM article
         WHERE id = ?";
 
-/** @var mysqli $conn */
-$stmt = mysqli_prepare($conn, $sql);
+    /** @var mysqli $conn */
+    $stmt = mysqli_prepare($conn, $sql);
 
 //判斷查詢結果是否成功
-if ($stmt === false) {
-    echo mysqli_error($conn);
-} else {
-
-    mysqli_stmt_bind_param($stmt, "i", $id);
-
-    if (mysqli_stmt_execute($stmt)) {
-        redirect("/index.php");
+    if ($stmt === false) {
+        echo mysqli_error($conn);
     } else {
-        echo mysqli_stmt_error($stmt);
+
+        mysqli_stmt_bind_param($stmt, "i", $id);
+
+        if (mysqli_stmt_execute($stmt)) {
+            redirect("/index.php");
+        } else {
+            echo mysqli_stmt_error($stmt);
+        }
     }
+
 }
