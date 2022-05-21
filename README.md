@@ -175,6 +175,11 @@ Function 是一種封裝程式碼以可重複執行的方法
 
 重新顯示已提交但異常的內容
 
+## XSS
+
+- [Reserved characters](https://developer.mozilla.org/en-US/docs/Glossary/Entity#reserved_characters)
+- [htmlspecialchars](https://www.php.net/manual/en/function.htmlspecialchars.php)
+
 ## 專案來源
 
 此專案為 Dave Hollingworth 所開設的 Udemy 課程
