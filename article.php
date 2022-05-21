@@ -5,6 +5,8 @@ include 'includes/database.php';
 // 驗證傳進來的GET是不是數字
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 
+    $conn = getDB();
+
     $sql = "SELECT *
         FROM article
         WHERE id = " . $_GET['id'];
