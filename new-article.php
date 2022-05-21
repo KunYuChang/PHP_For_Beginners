@@ -4,14 +4,21 @@
 require 'includes/database.php';
 
 $errors = [];
+$title = '';
+$content = '';
+$published_at = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    if ($_POST['title'] == '') {
+    $title = $_POST['title'];
+    $content = $_POST['content'];
+    $published_at = $_POST['published_at'];
+
+    if ($title == '') {
         $errors[] = 'Title is required';
     }
 
-    if ($_POST['content'] == '') {
+    if ($content == '') {
         $errors[] = 'Content is required';
     }
 
@@ -29,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo mysqli_error($conn);
         } else {
 
-            mysqli_stmt_bind_param($stmt, "sss", $_POST['title'], $_POST['content'], $_POST['published_at']);
+            mysqli_stmt_bind_param($stmt, "sss", $title, $content, $published_at);
 
             if (mysqli_stmt_execute($stmt)) {
                 $id = mysqli_insert_id($conn);
@@ -57,17 +64,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <form action="" method="post">
     <div>
         <label for="title">Title</label>
-        <input type="text" name="title" id="title" placeholder="Article title">
+        <input type="text" name="title" id="title" placeholder="Article title" value="<?= $title?>">
     </div>
 
     <div>
         <label for="content">Content</label>
-        <textarea name="content" id="content" cols="40" rows="4" placeholder="Article content"></textarea>
+        <textarea name="content" id="content" cols="40" rows="4" placeholder="Article content"><?= $content?></textarea>
     </div>
 
     <div>
         <label for="published_at">Publication date and time</label>
-        <input type="text" name="published_at" id="published_at">
+        <input type="text" name="published_at" id="published_at" value="<?= $published_at?>">
     </div>
 
     <button>Add</button>
