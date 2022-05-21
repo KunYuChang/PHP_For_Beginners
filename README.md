@@ -156,6 +156,14 @@ How SQL Injection Attacks Work
 Avoid SQL Injection Attacks:Escape Input
 - [mysqli_real_escape_string](https://www.php.net/manual/en/mysqli.real-escape-string.php)
 - [mysqli_escape_string](https://www.php.net/manual/en/function.mysqli-escape-string.php)
+
+Avoid SQL Injection Attacks:Use Prepared Statements
+- [Prepared Statements](https://www.php.net/manual/en/mysqli.quickstart.prepared-statements.php)
+- [mysqli_prepare](https://www.php.net/manual/en/mysqli.prepare.php)
+- [mysqli_stmt_bind_param](https://www.php.net/manual/en/mysqli-stmt.bind-param.php)
+- [mysqli_stmt_execute](https://www.php.net/manual/en/mysqli-stmt.execute.php)
+- [General Query Log](https://mariadb.com/kb/en/general-query-log/)
+
 ## 專案來源
 
 此專案為 Dave Hollingworth 所開設的 Udemy 課程
