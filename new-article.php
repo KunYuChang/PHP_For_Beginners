@@ -2,8 +2,8 @@
 
 // 資料庫連線
 require 'includes/database.php';
+require 'includes/article.php';
 
-$errors = [];
 $title = '';
 $content = '';
 $published_at = '';
@@ -14,13 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $content = $_POST['content'];
     $published_at = $_POST['published_at'];
 
-    if ($title == '') {
-        $errors[] = 'Title is required';
-    }
-
-    if ($content == '') {
-        $errors[] = 'Content is required';
-    }
+    $errors = validateArticle($title, $content, $published_at);
 
     if (empty($errors)) {
         $conn = getDB();

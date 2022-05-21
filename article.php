@@ -21,9 +21,11 @@ if (isset($_GET['id'])) {
         <ul>
             <li>
                 <article>
-                    <h2><?= $article['title']; ?></h2>
-                    <p><?= $article['content']; ?></p>
+                    <h2><?= htmlspecialchars($article['title']); ?></h2>
+                    <p><?= htmlspecialchars($article['content']); ?></p>
                 </article>
+
+                <a href="edit-article.php?id=<?= $article['id']?>">Edit</a>
             </li>
         </ul>
     <?php endif; ?>
