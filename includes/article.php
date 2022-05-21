@@ -5,10 +5,11 @@
  * Get the article record based on thd ID
  * @param object $conn Connection to the database
  * @param integer $id the article ID
+ * @param string $columns Optional list of columns for the select, defaults to *
  * @return array|false|void|null An associative array containing the article with that ID, or null if not found
  */
-function getArticle($conn, $id){
-    $sql = "SELECT *
+function getArticle($conn, $id, $columns = '*'){
+    $sql = "SELECT $columns
         FROM article
         WHERE id = ?";
 

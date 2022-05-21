@@ -180,6 +180,14 @@ Function 是一種封裝程式碼以可重複執行的方法
 - [Reserved characters](https://developer.mozilla.org/en-US/docs/Glossary/Entity#reserved_characters)
 - [htmlspecialchars](https://www.php.net/manual/en/function.htmlspecialchars.php)
 
+## SELECT * 性能
+
+- [Why is SELECT * considered harmful?](https://stackoverflow.com/questions/3639861/why-is-select-considered-harmful/3639964#3639964)
+
+## CRUD
+
+- [Create, read, update and delete](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
+
 ## 專案來源
 
 此專案為 Dave Hollingworth 所開設的 Udemy 課程
