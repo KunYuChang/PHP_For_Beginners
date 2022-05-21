@@ -1,8 +1,11 @@
 <?php
+
+// 資料庫連線
+require 'includes/database.php';
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    // 資料庫連線
-    require 'includes/database.php';
+    $conn = getDB();
 
     $sql = "INSERT INTO article (title, content, published_at)
             VALUES (?,?,?)";

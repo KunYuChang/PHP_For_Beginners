@@ -164,6 +164,15 @@ Avoid SQL Injection Attacks:Use Prepared Statements
 - [mysqli_stmt_execute](https://www.php.net/manual/en/mysqli-stmt.execute.php)
 - [General Query Log](https://mariadb.com/kb/en/general-query-log/)
 
+## 涵式與驗證
+
+Function 是一種封裝程式碼以可重複執行的方法
+- [PHPDoc](https://docs.phpdoc.org/guide/getting-started/what-is-a-docblock.html)
+
+連線DB優化
+1. 獨立成一個檔案，避免重複
+2. 使用涵式，好處是可以判斷什麼時候要連線、什麼時候不要
+
 ## 專案來源
 
 此專案為 Dave Hollingworth 所開設的 Udemy 課程
