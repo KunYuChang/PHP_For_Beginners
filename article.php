@@ -1,25 +1,13 @@
 <?php
 
-include 'includes/database.php';
+require 'includes/database.php';
+require 'includes/article.php';
+
+$conn = getDB();
 
 // 驗證傳進來的GET是不是數字
-if (isset($_GET['id']) && is_numeric($_GET['id'])) {
-
-    $conn = getDB();
-
-    $sql = "SELECT *
-        FROM article
-        WHERE id = " . $_GET['id'];
-
-    /** @var mysqli $conn */
-    $results = mysqli_query($conn, $sql);
-
-    //判斷查詢結果是否成功
-    if ($results === false) {
-        echo mysqli_error($conn);
-    } else {
-        $article = mysqli_fetch_assoc($results);
-    }
+if (isset($_GET['id'])) {
+    $article = getArticle($conn, $_GET['id']);
 } else {
     $article = null;
 }
