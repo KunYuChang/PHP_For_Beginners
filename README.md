@@ -188,6 +188,17 @@ Function 是一種封裝程式碼以可重複執行的方法
 
 - [Create, read, update and delete](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
 
+## Session 登入與限制訪問
+
+默認情況下，PHP Session 會在瀏覽器自動儲存一個 Cookie。
+
+- [session_start](https://www.php.net/manual/en/function.session-start.php)
+- [$_SESSION](https://www.php.net/manual/en/reserved.variables.session.php)
+- [setcookie](https://www.php.net/manual/en/function.setcookie.php)
+- [$_COOKIE](https://www.php.net/manual/en/reserved.variables.cookies.php)
+- [Runtime Configuration](https://www.php.net/manual/en/session.configuration.php#ini.session.use-cookies)
+
+
 ## 專案來源
 
 此專案為 Dave Hollingworth 所開設的 Udemy 課程
