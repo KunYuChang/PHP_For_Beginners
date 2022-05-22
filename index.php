@@ -14,13 +14,7 @@ $sql = "SELECT *
 
 $results = $conn->query($sql);
 
-//判斷查詢結果是否成功
-if ($results === false) {
-    var_dump($conn->errorInfo());
-} else {
-    //  fetch all 取得全部資料
-    $articles = $results->fetchAll(PDO::FETCH_ASSOC);
-}
+$articles = $results->fetchAll(PDO::FETCH_ASSOC);
 
 echo "Connected successfully";
 
@@ -28,12 +22,12 @@ echo "Connected successfully";
 
 <?php require 'includes/header.php'; ?>
 
-<?php if (isLoggedIn()):?>
+<?php if (isLoggedIn()): ?>
     <p>You are logged in. <a href="logout.php">Log out</a></p>
     <a href="new-article.php">New article</a>
-<?php else:?>
+<?php else: ?>
     <p>You are not logged in. <a href="login.php">Log in</a></p>
-<?php endif;?>
+<?php endif; ?>
 
 <?php if (empty($articles)) : ?>
     <p>No articles found.</p>

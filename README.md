@@ -202,6 +202,12 @@ Function 是一種封裝程式碼以可重複執行的方法
 
 - [PSR-1: Basic Coding Standard](https://www.php-fig.org/psr/psr-1/)
 
+## PDO
+
+- [Exceptions](https://www.php.net/manual/en/language.exceptions.php)
+- [Exception Class](https://www.php.net/manual/en/class.exception.php)
+- [Errors handling](https://www.php.net/manual/en/pdo.error-handling.php)
+- 
 ## 專案來源
 
 此專案為 Dave Hollingworth 所開設的 Udemy 課程
