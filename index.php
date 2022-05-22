@@ -5,21 +5,21 @@ require 'includes/auth.php';
 
 session_start();
 
-$conn = getDB();
+$db = new Database();
+$conn = $db->getConn();
 
 $sql = "SELECT *
         FROM article
         ORDER BY published_at";
 
-
-$results = mysqli_query($conn, $sql);
+$results = $conn->query($sql);
 
 //判斷查詢結果是否成功
 if ($results === false) {
-    echo mysqli_error($conn);
+    var_dump($conn->errorInfo());
 } else {
     //  fetch all 取得全部資料
-    $articles = mysqli_fetch_all($results, MYSQLI_ASSOC);
+    $articles = $results->fetchAll(PDO::FETCH_ASSOC);
 }
 
 echo "Connected successfully";
