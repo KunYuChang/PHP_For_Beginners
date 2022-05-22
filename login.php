@@ -7,6 +7,10 @@ session_status();
 if ($_SESSION['REQUEST_METHOD'] == "POST")
 {
     if($_POST['username'] == 'dave' && $_POST['password'] == 'secret') {
+
+//      防止 Session fixation
+        session_regenerate_id(true);
+
         $_SESSION['is_logged_in'] = true;
 
         redirect('/');
