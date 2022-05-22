@@ -1,9 +1,11 @@
 <?php
 
-require 'includes/database.php';
+require 'classes/Database.php';
 require 'includes/article.php';
 
-$conn = getDB();
+$db = new Database();
+$conn = $db->getConn();
+
 
 // 驗證傳進來的GET是不是數字
 if (isset($_GET['id'])) {
@@ -15,7 +17,7 @@ if (isset($_GET['id'])) {
 ?>
 
 <?php require 'includes/header.php'; ?>
-    <?php if (empty($article)) : ?>
+    <?php if (!$article) : ?>
         <p>Article not found.</p>
     <?php else : ?>
         <ul>

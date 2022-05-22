@@ -207,7 +207,9 @@ Function 是一種封裝程式碼以可重複執行的方法
 - [Exceptions](https://www.php.net/manual/en/language.exceptions.php)
 - [Exception Class](https://www.php.net/manual/en/class.exception.php)
 - [Errors handling](https://www.php.net/manual/en/pdo.error-handling.php)
-- 
+- [PDO::prepare](https://www.php.net/manual/en/pdo.prepare.php)
+- [PDOStatement::bindValue](https://www.php.net/manual/en/pdostatement.bindvalue.php)
+- [PDOStatement::fetch](https://www.php.net/manual/en/pdostatement.fetch.php)
 ## 專案來源
 
 此專案為 Dave Hollingworth 所開設的 Udemy 課程
