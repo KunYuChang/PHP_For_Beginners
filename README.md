@@ -198,6 +198,9 @@ Function 是一種封裝程式碼以可重複執行的方法
 - [$_COOKIE](https://www.php.net/manual/en/reserved.variables.cookies.php)
 - [Runtime Configuration](https://www.php.net/manual/en/session.configuration.php#ini.session.use-cookies)
 
+## OOP
+
+- [PSR-1: Basic Coding Standard](https://www.php-fig.org/psr/psr-1/)
 
 ## 專案來源
 
